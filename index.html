@@ -124,7 +124,7 @@
             </div>
           </div>
           <!-- Thumbnails -->
-          <div class="thumbnail-container">
+          <div class="thumbnail-container hidden lg:flex lg:gap-4">
             <div class="thumbnail" data-carousel-slide-to="0">
               <img src="/assets/carousel/1.webp" alt="Thumbnail 1" />
             </div>
@@ -141,9 +141,10 @@
               <img src="/assets/carousel/5.webp" alt="Thumbnail 5" />
             </div>
             <div class="thumbnail" data-carousel-slide-to="5">
-              <img src="/assets/carousel/6.webp" alt="Thumbnail 5" />
+              <img src="/assets/carousel/6.webp" alt="Thumbnail 6" />
             </div>
           </div>
+          
         </div>
 
         <!-- carousel end -->
@@ -635,6 +636,27 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const interval = 3000; // 3 seconds
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const totalItems = carouselItems.length;
+        let currentIndex = 0;
+    
+        const changeSlide = () => {
+          carouselItems[currentIndex].classList.remove('active');
+          currentIndex = (currentIndex + 1) % totalItems;
+          carouselItems[currentIndex].classList.add('active');
+        };
+    
+        // Change slide every interval
+        setInterval(changeSlide, interval);
+    
+        // Optional: Ensure the active class is properly set on page load
+        carouselItems[currentIndex].classList.add('active');
+      });
+    </script>
+    
     <script>
       document.querySelectorAll(".thumbnail").forEach((thumbnail) => {
         thumbnail.addEventListener("click", function () {

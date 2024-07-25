@@ -130,6 +130,15 @@ p {
   border: 2px solid white;
 }
 
+.carousel-item {
+  display: none; /* Hide all items by default */
+}
+
+.carousel-item.active {
+  display: block; /* Show the active item */
+}
+
+
 .right-card {
   background-color: #fff4ec;
 }
