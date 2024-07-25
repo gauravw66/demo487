@@ -643,16 +643,51 @@
         const totalItems = carouselItems.length;
         let currentIndex = 0;
     
+        // Function to change slides
         const changeSlide = () => {
           carouselItems[currentIndex].classList.remove('active');
           currentIndex = (currentIndex + 1) % totalItems;
           carouselItems[currentIndex].classList.add('active');
         };
     
-        // Change slide every interval
-        setInterval(changeSlide, interval);
+        // Auto-scroll every interval
+        let slideInterval = setInterval(changeSlide, interval);
     
-        // Optional: Ensure the active class is properly set on page load
+        // Swipe controls
+        let startX;
+        const handleSwipe = (e) => {
+          const touch = e.touches[0];
+          const endX = touch.pageX;
+    
+          if (startX > endX) {
+            // Swipe left
+            changeSlide();
+          } else if (startX < endX) {
+            // Swipe right
+            carouselItems[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            carouselItems[currentIndex].classList.add('active');
+          }
+    
+          e.preventDefault();
+        };
+    
+        const startSwipe = (e) => {
+          startX = e.touches[0].pageX;
+        };
+    
+        document.querySelector('#default-carousel').addEventListener('touchstart', startSwipe);
+        document.querySelector('#default-carousel').addEventListener('touchmove', handleSwipe);
+    
+        // Optional: Pause auto-scroll on manual interaction
+        document.querySelector('#default-carousel').addEventListener('touchstart', () => {
+          clearInterval(slideInterval);
+        });
+        document.querySelector('#default-carousel').addEventListener('touchend', () => {
+          slideInterval = setInterval(changeSlide, interval);
+        });
+    
+        // Initialize the active class
         carouselItems[currentIndex].classList.add('active');
       });
     </script>
