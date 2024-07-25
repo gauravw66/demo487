@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <title>Assignment Demo @487</title>
+  </head>
+
+  <body class="wrapper html">
+    <style>
+      :root {
+        --font-body: "GT-Alpina-Typewriter-Regular-Trial";
+        --font-heading: "ITCGaramondStd-LtCond";
+        --font-desc: "ITCGaramondStd-LtCond";
+      }
+
+      .font-body {
+        font-family: var(--font-body);
+      }
+
+      .font-heading {
+        font-family: var(--font-heading);
+      }
+
+      .font-desc {
+        font-family: var(--font-desc);
+      }
+    </style>
+    <div class="border-black border-b text-xs text-black text-center">
+      <h2 class="pb-1 top-heading">NEW! MEET THE REFILL CANS</h2>
+    </div>
+    <!-- <h1 class="text-5xl">GRAZA</h1> -->
+    <div class="flex flex-row">
+      <!-- left-side  -->
+      <div class="w-1/2 overflow-hidden relative">
+        <img
+          src="assets/logo.png"
+          alt="logo-preview"
+          class="w-52 mx-16 absolute z-10"
+        />
+        <!-- Carousel start -->
+        <div id="default-carousel" class="relative w-full h-screen">
+          <!-- Carousel wrapper -->
+          <div class="relative h-screen overflow-hidden">
+            <!-- Item 1 -->
+            <div
+              class="carousel-item active duration-700 ease-in-out h-screen"
+              data-carousel-item="0"
+            >
+              <img
+                src="/assets/carousel/1.webp"
+                class="absolute block w-full h-full object-cover"
+                alt="..."
+              />
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="carousel-item duration-700 ease-in-out h-screen"
+              data-carousel-item="1"
+            >
+              <img
+                src="/assets/carousel/2.webp"
+                class="absolute block w-full h-full object-cover"
+                alt="..."
+              />
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="carousel-item duration-700 ease-in-out h-screen"
+              data-carousel-item="2"
+            >
+              <img
+                src="/assets/carousel/3.webp"
+                class="absolute block w-full h-full object-cover"
+                alt="..."
+              />
+            </div>
+            <!-- Item 4 -->
+            <div
+              class="carousel-item duration-700 ease-in-out h-screen"
+              data-carousel-item="3"
+            >
+              <img
+                src="/assets/carousel/4.webp"
+                class="absolute block w-full h-full object-cover"
+                alt="..."
+              />
+            </div>
+            <!-- Item 5 -->
+            <div
+              class="carousel-item duration-700 ease-in-out h-screen"
+              data-carousel-item="4"
+            >
+              <img
+                src="/assets/carousel/5.webp"
+                class="absolute block w-full h-full object-cover"
+                alt="..."
+              />
+            </div>
+            <!-- Item 6 -->
+            <div
+              class="carousel-item duration-700 ease-in-out h-screen"
+              data-carousel-item="4"
+            >
+              <img
+                src="/assets/carousel/6.webp"
+                class="absolute block w-full h-full object-cover"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- Thumbnails -->
+          <div class="thumbnail-container">
+            <div class="thumbnail" data-carousel-slide-to="0">
+              <img src="/assets/carousel/1.webp" alt="Thumbnail 1" />
+            </div>
+            <div class="thumbnail" data-carousel-slide-to="1">
+              <img src="/assets/carousel/2.webp" alt="Thumbnail 2" />
+            </div>
+            <div class="thumbnail" data-carousel-slide-to="2">
+              <img src="/assets/carousel/3.webp" alt="Thumbnail 3" />
+            </div>
+            <div class="thumbnail" data-carousel-slide-to="3">
+              <img src="/assets/carousel/4.webp" alt="Thumbnail 4" />
+            </div>
+            <div class="thumbnail" data-carousel-slide-to="4">
+              <img src="/assets/carousel/5.webp" alt="Thumbnail 5" />
+            </div>
+            <div class="thumbnail" data-carousel-slide-to="5">
+              <img src="/assets/carousel/6.webp" alt="Thumbnail 5" />
+            </div>
+          </div>
+        </div>
+
+        <!-- carousel end -->
+      </div>
+      <!-- right -->
+      <div class="w-1/2 bg-[#F6E6D9] h-screen overflow-y-scroll scrollbar-hide">
+        <nav class="flex justify-center mt-5">
+          <div
+            class="flex items-center gap-10 body-text text-md font-semibold tracking-widest"
+          >
+            <ul class="flex flex-row gap-10">
+              <li class="cursor-pointer">Shop</li>
+              <li class="cursor-pointer">Get Refills</li>
+              <li class="cursor-pointer">About</li>
+              <li class="cursor-pointer">Blog</li>
+            </ul>
+            <i
+              class="fa fa-user-circle user-icon border border-black rounded-full text-4xl"
+              aria-hidden="true"
+            ></i>
+            <button
+              class="border border-black hover:bg-[#38562e] rounded-2xl px-4 py-1"
+            >
+              Cart [0]
+            </button>
+          </div>
+        </nav>
+        <div class="relative justify-center w-full flex">
+          <img
+            src="assets/heading.png"
+            alt="heading-preview"
+            class="absolute z-10 w-96 mt-8 cursor-text"
+          />
+        </div>
+
+        <!-- right-side -->
+        <div class="mt-48 body-text scrollbar-hide">
+          <div
+            class="bg-[#FFF4EC] p-6 rounded-xl shadow-lg max-w-lg mx-auto border border-black right-card"
+          >
+            <div class="mb-6">
+              <h2 class="text-xl font-semibold mb-2 heading-text">Quantity</h2>
+              <div class="flex space-x-2">
+                <div
+                  class="flex-1 border rounded-lg text-center flex flex-col h-24 border-black"
+                >
+                  <div
+                    class="flex-1 rounded-t-lg button-color text-white flex items-center justify-center"
+                  >
+                    10% Off
+                  </div>
+                  <div
+                    class="flex-1 flex items-center justify-center button-color-bottom rounded-b-lg"
+                  >
+                    <p>1 Set</p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex-1 border rounded-lg text-center flex flex-col h-24 border-black"
+                >
+                  <div
+                    class="flex-1 rounded-t-lg button-color text-white flex items-center justify-center"
+                  >
+                    14% Off
+                  </div>
+                  <div
+                    class="flex-1 flex items-center justify-center button-color-bottom rounded-b-lg"
+                  >
+                    <p>2 Sets</p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex-1 border rounded-lg text-center flex flex-col h-24 border-black"
+                >
+                  <div
+                    class="flex-1 rounded-t-lg button-color text-white flex items-center justify-center"
+                  >
+                    15% Off
+                  </div>
+                  <div
+                    class="flex-1 flex items-center justify-center button-color-bottom rounded-b-lg"
+                  >
+                    <p>3 Sets</p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex-1 border rounded-lg text-center flex flex-col h-24 border-black"
+                >
+                  <div
+                    class="flex-1 rounded-t-lg button-color text-white flex items-center justify-center"
+                  >
+                    17% Off
+                  </div>
+                  <div
+                    class="flex-1 flex items-center justify-center button-color-bottom rounded-b-lg"
+                  >
+                    <p>6 Sets</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="w-full border border-black border-dashed my-3"></div>
+              <div class="flex items-center mb-2">
+                <input
+                  type="radio"
+                  name="purchase"
+                  id="one-time"
+                  class="mr-2 accent-green-600"
+                />
+                <label for="one-time" class="text-gray-700 flex w-full">
+                  <span>One Time Purchase</span>
+                  <span class="ml-auto"> $69</span>
+                </label>
+              </div>
+
+              <div
+                class="w-full border border-black border-dashed my-3 flex"
+              ></div>
+              <div class="flex items-center mb-2">
+                <input
+                  type="radio"
+                  name="purchase"
+                  id="one-time"
+                  class="mr-2 radio-button"
+                />
+                <label for="one-time" class="text-gray-700 flex w-full">
+                  <span>Subscribe & Save</span>
+                  <span class="ml-auto"> $64.17</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <!-- <h2 class="text-xl font-semibold mb-2">Frequency</h2> -->
+              <select
+                class="w-full px-3 py-1 border rounded-full list-color-bottom"
+              >
+                <option>Frequency : Every 1 Month</option>
+                <option>Frequency : Every 2 Months</option>
+                <option>Frequency : Every 3 Months</option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-xl mb-2">Select Refill Preference:</h2>
+              <div class="flex space-x-2 gap-3">
+                <div
+                  class="flex p-3 border border-black rounded-lg new-button-color-bottom text-green-800 w-1/2"
+                >
+                <img src="assets/list/1.avif" alt="" class="w-16">
+                  Refill Cans<br />$33.30 / order
+                </div>
+                <div class="flex p-3 border border-black rounded-lg w-1/2 list-color-bottom">
+                  <img src="assets/list/2.avif" alt="" class="w-16">
+                  Squeeze Bottles<br />$33.30 / order
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6 text-gray-700">
+              <h2 class="font-semibold text-lg">FIRST ORDER:</h2>
+              <p>1 Sizzle Bottle, 1 Drizzle Bottle</p>
+              <h2 class="font-semibold text-lg">RECURRING:</h2>
+              <p>1 Sizzle Can, 1 Drizzle Can</p>
+            </div>
+
+            <button class="w-full px-3 py-1 new-button-color-bottom text-black rounded-full border border-black">
+              Subscribe - $33.30
+            </button>
+            <p class="mt-2 text-center text-black text-md">
+              Skip, Edit or Cancel Anytime
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-lg shadow-lg max-w-lg mx-auto my-10 border right-card border-black"
+          >
+            <div class="flex border-b mb-6">
+              <button
+                class="tab-button px-4 py-2 text-sm font-semibold text-gray-700 border-b-2 border-green-500"
+                data-tab="details"
+              >
+                DETAILS
+              </button>
+              <button
+                class="tab-button px-4 py-2 text-sm font-semibold text-gray-700 border-b-2"
+                data-tab="harvest"
+              >
+                HARVEST
+              </button>
+              <button
+                class="tab-button px-4 py-2 text-sm font-semibold text-gray-700 border-b-2"
+                data-tab="uses"
+              >
+                USES
+              </button>
+              <button
+                class="tab-button px-4 py-2 text-sm font-semibold text-gray-700 border-b-2"
+                data-tab="refills"
+              >
+                REFILLS
+              </button>
+            </div>
+
+            <div class="tab-content active" id="details">
+              <h1 class="text-lg font-semibold mb-2">DRIZZLE: 500ML</h1>
+              <p class="text-gray-700 mb-4">
+                Extra Virgin finishing oil made from olives that are picked
+                early, when flavor is bold and antioxidants are highest. Made
+                for eating, not heating.
+              </p>
+              <p class="text-lg font-semibold mb-2">SIZZLE: 750ML</p>
+              <p class="text-gray-700">
+                Extra Virgin cooking oil made from mature, mid-season olives
+                that yield a more mellow flavor. Use it every day, in every way.
+              </p>
+            </div>
+            <div class="tab-content" id="harvest">
+              <h1 class="text-lg font-semibold mb-2">DRIZZLE: 500ML</h1>
+              <p class="text-gray-700 mb-4">
+                Harvested in October, before the olives have ripened fully.
+                Picked by hand because young olives need a firm yank to loosen
+                up.
+              </p>
+              <h1 class="text-lg font-semibold mb-2">SIZZLE: 750ML</h1>
+              <p class="text-gray-700 body-text">
+                Harvested in November and December, when the olives are more
+                mature. They’re pretty laid back by this point, so it only takes
+                a few shakes to get them off the branch.
+              </p>
+            </div>
+            <div class="tab-content" id="uses">
+              <h1 class="text-lg font-semibold mb-2">DRIZZLE: 500ML</h1>
+              <p class="text-gray-700 mb-4">
+                A little Drizzle goes a long way! Put it on your ice cream or
+                popcorn, whip up a pesto or salad dressing, or drink it straight
+                from a spoon (we won’t tell).
+              </p>
+              <p class="text-lg font-semibold mb-2">SIZZLE: 750ML</p>
+              <p class="text-gray-700">
+                If you would put it in or on top of an oven, use Sizzle. Chicken
+                cutlets, sheet pan veggies, fried rice, or even chocolate chip
+                cookies! You name it, Sizzle Sizzles it.
+              </p>
+            </div>
+            <div class="tab-content" id="refills">
+              <h1 class="text-lg font-semibold mb-2">
+                DRIZZLE REFILL CAN: 500ML
+              </h1>
+              <!-- <p class="text-gray-700 mb-4">Extra Virgin finishing oil made from olives that are picked early, when flavor is bold and antioxidants are highest. Made for eating, not heating.</p> -->
+              <h1 class="text-lg font-semibold mb-2">
+                DRIZZLE REFILL CAN: 750ML
+              </h1>
+              <p class="text-gray-700">
+                Perfectly portioned and 100% recyclable, our “beer can” refills
+                are designed to keep your delicious olive oil super fresh. Just
+                crack open, pour into a squeeze bottle (using a kitchen funnel!)
+                and get cookin'.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bottom section -->
+
+    <div class="w-full flex mx-auto my-24">
+      <div class="w-1/3 pl-32 justify-center items-center">
+        <div class="flex justify-center py-10">
+          <img src="assets/scroll/0.0.png" alt="" class="w-64" />
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/1.0.webp"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            HARVESTED IN OCTOBER
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            Olives are picked very early in the harvest season when they are
+            young, green and hard as rocks.
+          </p>
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/2.0.webp"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            24LBS OLIVES = 1 LITER OF OIL
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            When pressed, these young olives only yield a tiny bit of oil. It
+            takes 24lbs of Picual olives harvested in October to produce 1 liter
+            of this (super flavorful) oil!
+          </p>
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/3.0.avif"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            HAS A KICK!
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            Young olives are full of attitude. They yield a spicier, more
+            flavor-packed oil. These are great qualities for a finishing oil!
+          </p>
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/4.0.avif"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            #1 FINISHING OIL
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            Because of the flavor and health benefits present, you wouldn’t want
+            to cook with Drizzle. That’s why we say “Made for eating, never
+            heating”! Instead, use this oil when you want your olive oil to
+            steal the show.
+          </p>
+        </div>
+      </div>
+      <div class="relative flex items-stretch justify-center w-1/3 py-48">
+        <div class="h-full relative w-full">
+          <div
+            class="h-full border-r-2 border-dashed border-black absolute left-1/2 transform -translate-x-1/2"
+          ></div>
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 top-0 w-6 h-6 bg-green-700 rounded-full border border-black"
+          ></div>
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-6 h-6 bg-green-700 rounded-full border border-black"
+          ></div>
+          <img
+            src="assets/scroll-img.png"
+            alt=""
+            class="sticky mt-40 top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 z-10 w-44"
+          />
+        </div>
+      </div>
+
+      <div class="w-1/3 pr-32">
+        <div class="flex justify-center py-10">
+          <img src="assets/scroll/0.1.png" alt="" class="w-64" />
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/1.1.webp"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            HARVESTED IN NOVEMBER
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            Olives are picked during peak harvest season when they are more
+            mature and a bit juicier.
+          </p>
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/2.1.webp"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            13LBS OF OLIVES = 1 LITER OF OIL
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            When pressed, these more mature, juicier olives yield a lot more
+            oil. It only takes about 13 lbs of Picual olives harvested in
+            December/January to produce the same liter of cooking oil.
+          </p>
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/3.1.avif"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            TAKES IT EASY
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            Just like (most) humans, olives get more chill with age. The oil
+            produced from these olives will be milder in flavor, and make for a
+            more flexible cooking oil.
+          </p>
+        </div>
+        <div class="mb-32 text-center">
+          <img
+            src="assets/scroll/4.1.avif"
+            alt=""
+            class="rounded-2xl mx-auto"
+          />
+          <h2 class="font-semibold text-14 lg:text-16 uppercase mt-gutter my-5">
+            #1 COOKING OIL
+          </h2>
+          <p class="text-14 lg:text-16 mt-gutter tracking-wider">
+            Because of its mellow flavor and higher smoke point, Sizzle can be
+            used in a lot of different ways. Great for everyday cooking like
+            roasting, searing, poaching, pan frying, baking, and marinating.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- last-section -->
+
+    <div class="px-6">
+      <div
+        class="p-6 rounded-lg max-w-5xl mx-auto flex items-center space-x-6 last-section mb-10 -mt-20"
+      >
+        <!-- Left side image -->
+        <div class="w-auto mr-5">
+          <img
+            src="/assets/last-image.webp"
+            alt="Starter Kit"
+            class="rounded-lg font-heading"
+          />
+        </div>
+        <!-- Right side content -->
+        <div class="w-2/3">
+          <h1 class="text-3xl font-semibold mb-4">Squeeze, refill, repeat.</h1>
+          <!-- <div class="border border-black border-dashed"></div> -->
+          <p class="mb-4 text-lg border-t border-dashed border-black">
+            <span class="font-bold">[THE STARTER KIT] $65</span><br />
+            “Drizzle” - 1 Bottle - 500mL<br />
+            “Sizzle” - 1 Bottle - 750mL<br />
+            "Drizzle" & "Sizzle" Refill Set + Free Graza Funnel!
+          </p>
+          <hr class="my-4 border-t border-dotted" />
+          <button
+            class="px-6 py-2 bg-white text-gray-800 font-semibold rounded-full shadow"
+          >
+            Shop the Starter Kit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script>
+      document.querySelectorAll(".thumbnail").forEach((thumbnail) => {
+        thumbnail.addEventListener("click", function () {
+          const index = this.getAttribute("data-carousel-slide-to");
+          document.querySelectorAll(".carousel-item").forEach((item, i) => {
+            if (i == index) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+          document.querySelectorAll(".thumbnail img").forEach((img, i) => {
+            if (i == index) {
+              img.classList.add("active");
+            } else {
+              img.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            tabButtons.forEach((btn) =>
+              btn.classList.remove("border-green-500")
+            );
+            tabContents.forEach((content) =>
+              content.classList.remove("active")
+            );
+            this.classList.add("border-green-500");
+            document
+              .getElementById(this.getAttribute("data-tab"))
+              .classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

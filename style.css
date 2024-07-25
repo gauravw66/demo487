@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+:root {
+  --font-body: "GT-Alpina-Typewriter-Regular-Trial";
+  --font-heading: "ITCGaramondStd-LtCond";
+  --font-desc: "ITCGaramondStd-LtCond";
+}
+
+@font-face {
+  font-family: var(--font-body);
+  src: url("fonts/GT-Alpina-Typewriter-Regular-Trial.otf");
+}
+
+@font-face {
+  font-family: var(--font-heading);
+  src: url("fonts/ITCGaramondStd-LtCond.otf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: var(--font-desc);
+  src: url("fonts/ITCGaramondStd-LtCond.otf");
+}
+
+.body-text {
+  font-family: var(--font-body);
+}
+
+.heading-text,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-size: x-large;
+  font-weight: 400;
+}
+
+.desc-text,
+p {
+  font-family: var(--font-desc);
+  font-weight: 100;
+  font-size: larger;
+}
+
+.top-heading {
+  font-family: var(--font-heading);
+}
+
+.html {
+  font-family: Alpina;
+  color: #3c422e;
+}
+
+.heading {
+  font-family: GaramondNova;
+  color: #3c422e;
+}
+
+.wrapper {
+  background-color: #f6e6d9;
+}
+
+.quantity-box {
+  background-color: #fff4ec;
+}
+
+.quantity-box .upper {
+  background-color: #3c422e;
+}
+
+.quantity-box .lower {
+  background-color: #9eef80;
+}
+
+.user-icon {
+  color: #fff4ec;
+}
+
+/* .user-icon:hover{
+    color: #37552c;
+    
+} */
+
+.carousel-item {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+.thumbnail {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.thumbnail-container {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.thumbnail img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid black;
+}
+.thumbnail img.active {
+  border: 2px solid white;
+}
+
+.right-card {
+  background-color: #fff4ec;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.last-section{
+    background-color: #D1E030;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .button-color{
+    background-color: #3c422e;
+  }
+
+  .list-color-bottom{
+    background-color: #fff4ec;
+  }
+
+  .list-color-bottom:hover{
+    background-color: #f6e6d9;
+  }
+
+  .new-button-color-bottom{
+    background-color: #9eef80;
+  }
+
+  .button-color-bottom:hover{
+    background-color: #9eef80;
+  }
+
+  .radio-button.active{
+    background-color: #9eef80;
+  }
