@@ -144,6 +144,24 @@ p {
   opacity: 1;
 }
 
+.new-button-subscribe{
+  background-color: #d1e030;
+}
+
+/* .new-button-subscribe-bg {
+  background-image: url('./assets/button.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+} */
+
+.new-button-subscribe-bg {
+  background-image: linear-gradient(45deg, #3C422E 25%, transparent 25%), 
+                    linear-gradient(-45deg, #3C422E 25%, transparent 25%), 
+                    linear-gradient(45deg, transparent 75%, #3C422E 75%), 
+                    linear-gradient(-45deg, transparent 75%, #3C422E 75%);
+                    background-position: 0 0, 0 3px, 3px -3px, -3px 0;
+                    background-size: 6px 6px;
+}
 
 
 
@@ -183,7 +201,28 @@ p {
     background-color: #f6e6d9;
   }
 
-  .new-button-color-bottom{
+  .active-tab {
+    background-color: #3C422E; /* Replace with your desired color */
+    color: #F6E6D9;
+  }
+
+  
+
+  /* .new-button-color-bottom{
+    background-color: #9eef80;
+  } */
+
+  /* <style> */
+                .custom-radio:checked {
+                  accent-color: green;
+                }
+              /* </style> */
+
+  .new-button-color-bottom {
+    background-color: #f6e6d9;
+  }
+
+  .selected {
     background-color: #9eef80;
   }
 
